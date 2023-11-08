@@ -35,7 +35,7 @@ ol {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -53,8 +53,7 @@ ul {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-    
-}
+    }
 
 /* ====================PAGE HRADER===================== */
 header {
@@ -496,6 +495,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     position: relative;
 
 }
+
 .hover-paragraph {
     position: absolute;
     top: 0;
@@ -730,9 +730,9 @@ letter-spacing: 0.04em;
 
 .subscribe-container {
     margin-left: 80px;
-    display: flex;
+    /* display: flex;
 
-    flex-direction: column;
+    flex-direction: column; */
 
 }
 
@@ -782,9 +782,10 @@ margin-left: 16px;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     z-index: 999;
+
+
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     visibility: hidden;
     pointer-events: none;
 }
@@ -859,8 +860,8 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 
 .form-title {
-min-width: 360px;
-max-height: 24px;
+/* min-width: 360px;
+max-height: 24px; */
 color:  #2E2F42;
 text-align: center;
 font-size: 16px;
@@ -1131,9 +1132,9 @@ transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     .checkbox-span-icon {
         
         stroke-width: 1px;
-        /* stroke:  rgba(46, 47, 66, 0.40); */
+        
         fill: none;
-        /* fill: transparent; */
+      
         border-radius: 2px;
         
     }
@@ -1143,11 +1144,113 @@ transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: #404BBF;
         border-radius: 2px;
         border: none;
-        /* stroke: #FFFFFF; */
-        fill:#F4F4FD;
+                fill:#F4F4FD;
     }
 
     .down-checkbox:focus + .contact-name
     .checkbox-span-fale {
         outline: 1px solid #404BBF;
     }
+
+
+    /* =================================SMARTPHONE-ADAPTATION=================== */
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        .main-title {
+            /* width: 288px;
+            height: 160px; */
+        }
+        
+        
+        .description-menu {
+            flex-direction: column;
+            gap: 72px;
+        }
+        .icon-container {
+            display: none;
+        }
+        .description-list  {
+           width: 288px;
+        }
+
+    }
+    
+    /* ==========================TABLET-ADAPTATION============================ */
+
+    @media screen and (min-width:768px) and (max-width:1158px)  {
+        .contacts-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .description-menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;    
+            gap: 72px 24px  ;
+            justify-content: center;
+        }
+        .description-list {
+           max-width: 356px;
+            flex-basis: calc((100% - 24px) / 2);
+        }
+        .icon-container {
+            display: none;
+        }
+        .description-category-title {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .team-menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           justify-content: center;
+           gap: 64px 24px;
+        }
+        .team-list {
+            width: 264px;
+            flex-basis: calc((100% - 24px) / 2);
+        
+        }
+
+
+/* ===================TEAM ADAPTACTION-============================= */
+
+.portfolio-list {
+    width: 356px;
+   flex-basis: calc((100% - 24px) / 2);
+   row-gap: 72px;
+}
+
+        /* FOOter */
+
+
+        .footer-cont {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+            gap: 72px 24px;
+            padding-left: 108px;
+    
+        }
+
+        .text-paragraphe-down {
+            width: 264px;
+        }
+        .footer-logotype-container {
+            margin: 0;
+        }
+        .subscribe-container {
+            margin: 0;
+           
+        }
+        .social-media-container {
+            
+        }
+
+        /* =================MODAL ADAPTATION================== */
+       
+    }
+
+    
