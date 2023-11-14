@@ -144,6 +144,10 @@ margin: 0 auto;
 
 
    /* ====================HEADER STYLES======= */
+/* ==================HERO STYLE====================== */
+.main-section {
+    background-color: #2E2F42;
+}
 
 
 /* ====================DESCRIPTION========================== */
@@ -182,6 +186,10 @@ margin-bottom: 8px;
 
 /* ========================TEAM SECTION=================== */
 
+
+.team-section {
+    background-color: #F4F4FD;
+}
 .team-list-container {
 padding: 32px 0;
 }
@@ -779,13 +787,23 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
             .mobile-menu-container {
                 position: relative;
                 padding-top: 72px;
+                padding-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                
             }
-            
+            .contacts-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 48px;
+            }
             .mobile-navigation-menu {
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
-                margin-bottom: 168px;
             }
             .mobile-address-menu {
                 display: flex;
@@ -872,9 +890,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
             .mobile-social-link:focus {
             background-color: #404bbf;
             }
-            .mobile-contacts {
-                margin-bottom: 48px;
-            }
+            
 
  /* ================================HEADER============================== */
 
@@ -1090,7 +1106,7 @@ screen and (min-device-pixel-ratio: 2)  and (max-width: 767px){
     .contacts-menu {
         display: flex;
         flex-direction: column;
-        /* gap: 12px; */
+        gap: 12px;
     }
     .modal-mobile-menu {
         display: none;
@@ -1121,7 +1137,8 @@ screen and (min-device-pixel-ratio: 2)  and (max-width: 767px){
         position: absolute;
         border-radius: 2px;
         left: 0;
-        bottom: -1px;
+        bottom: -9px;
+      
         
     }
     .up-title:hover,
@@ -1171,7 +1188,6 @@ screen and (min-device-pixel-ratio: 2)  and (max-width: 767px){
      
     .main-title {
     width: 496px;
-    height: 120px;
     margin-bottom: 36px;
 text-align: center;
 font-size: 56px;
@@ -1187,6 +1203,7 @@ letter-spacing: 0.02em;
  .description {
     padding-top: 96px;
     padding-bottom: 96px;
+    background-color: #F4F4FD;
  }
  .description-menu {
     display: flex;
@@ -1195,7 +1212,7 @@ letter-spacing: 0.02em;
     gap: 72px 24px;
  }
  .description-list {
-    max-width: 356px;
+    width: 264px;
      flex-basis: calc((100% - 24px) / 2);
  }
 .icon-container {
@@ -1227,7 +1244,8 @@ max-width: 356px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 72px 24px;
+        width: 528px;
     }
 .logotype-footer {
     margin-bottom: 17.5px;
@@ -1236,10 +1254,10 @@ max-width: 356px;
         width: 264px;
     }
 .footer-logotype-container {
-    margin-left: 108px;
+    /* margin-left: 108px; */
 }
 .subscribe-container {
-    margin-left: 108px;
+    /* margin-left: 108px; */
 }
 .down-input {
     width: 264px;
@@ -1265,6 +1283,8 @@ max-width: 356px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
+
+   
   
 }
 .team-container {
@@ -1272,6 +1292,7 @@ max-width: 356px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 584px;
 }
 .team-list {
     width: calc((100% - 24px) / 2);
@@ -1296,6 +1317,8 @@ max-width: 356px;
 
 
 /* ==================PORTFOLIO TABLET SECTION======================= */
+
+
 
 
 /* ====================MODAL TABLET WINDOW ====================*/
@@ -1365,7 +1388,11 @@ screen and (min-device-pixel-ratio: 2) and (min-width:768px) {
    font-size: 16px;
         
        }
-
+       .current::after {
+        bottom: -1px;
+      
+        
+    }
 /* ============================HEADER DESKTOP STYLE======================== */
 
 
@@ -1377,8 +1404,9 @@ screen and (min-device-pixel-ratio: 2) and (min-width:768px) {
      rgba(46, 47, 66, 0.70)), 
     url('../images/img-name.jpg');
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 1400px;
    background-position: center;
+   margin: 0 auto;
 padding-top: 188px;
 padding-bottom: 188px;
 }
@@ -1460,7 +1488,6 @@ letter-spacing: 0.32px;
     display: flex;
     flex-direction: flex;
     flex-wrap: nowrap;
-    align-items: center;
     gap: 0;
     
 }
